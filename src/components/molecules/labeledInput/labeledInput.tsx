@@ -7,7 +7,7 @@ const LabeledInput: React.FC<LabeledInputProps> = (props) => {
   return (
     <div>
       <Label text={props.text} />
-      <Input type={props.type} onChange={props.onChange} />
+      <Input type={props.type} onChange={props.onChange} value={props.value} />
     </div>
   );
 };

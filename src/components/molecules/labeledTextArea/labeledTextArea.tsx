@@ -7,7 +7,7 @@ const LabeledTextArea: React.FC<LabeledTextAreaProps> = (props) => {
   return (
     <div>
       <Label text={props.text} />
-      <TextArea text="" />
+      <TextArea onChange={props.onChange} value={props.value} />
     </div>
   );
 };

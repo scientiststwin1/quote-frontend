@@ -6,7 +6,7 @@ export type QuoteProps = {
   text: string;
   author: string;
   onDelete: (id: string) => void;
-  onEdit: (id: string) => void;
+  onEdit: (id: string, text: string, author: string) => void;
 };
 
 const Quote: React.FC<QuoteProps> = (props) => {
@@ -24,7 +24,7 @@ const Quote: React.FC<QuoteProps> = (props) => {
       {isTextHovered && (
         <div className="w-full space-x-2 mb-3">
           <Button text="Delete" onClick={() => props.onDelete(props.id)} />
-          <Button text="Edit" onClick={() => props.onEdit(props.id)} />
+          <Button text="Edit" onClick={() => props.onEdit(props.id, props.text, props.author)} />
         </div>
       )}
     </li>
