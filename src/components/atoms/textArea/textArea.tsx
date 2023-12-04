@@ -1,4 +1,4 @@
-type TextAreaProps = {
+export type TextAreaProps = {
   text: string;
 };
 
