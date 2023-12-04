@@ -31,7 +31,7 @@ abstract class BaseService {
 
   delete(id: string | number) {
     return axios
-      .delete(`${this.router}/${id}`)
+      .delete(`${this.router}/${id}/`)
       .then((response: any) => response.data);
   }
 }

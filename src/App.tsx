@@ -28,7 +28,7 @@ const App: React.FC = () => {
     });
   };
 
-  const onUpdateHandler = () => {
+  const updateQuote = () => {
     quoteService
       .update(newQuote.id, { text: newQuote.text, author: newQuote.author })
       .then((data) => {
@@ -102,14 +102,12 @@ const App: React.FC = () => {
         {newQuote.new ? (
           <Button text="Add" onClick={onAddHandler} />
         ) : (
-          <Button text="Update" onClick={onUpdateHandler} />
+          <Button text="Update" onClick={updateQuote} />
         )}
       </form>
 
       <section className="w-1/2">
-        <div>
           <Quotes quotes={quotes} />
-        </div>
       </section>
     </div>
   );
